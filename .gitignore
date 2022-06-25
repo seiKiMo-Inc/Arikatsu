@@ -1,0 +1,8 @@
+# Node Modules
+node_modules/
+
+# Environment
+.env
+bin/
+build/
+images/
