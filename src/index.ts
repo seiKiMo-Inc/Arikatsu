@@ -91,3 +91,6 @@ import {createServer, Server} from "http";
 
 const httpServer: Server = createServer(app);
 httpServer.listen(HTTP_PORT, () => console.log("Server started."));
+
+/* Start API server. */
+import "./api";
