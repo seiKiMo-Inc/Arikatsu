@@ -16,6 +16,15 @@ app.get('/kimi', async (req, res) => {
     res.status(200).send(json);
 });
 
+app.get('/org', async (req, res) => {
+    const response = await fetch("https://api.github.com/orgs/seiKiMo-Inc/members", {
+        redirect: "follow", headers: { Authorization: `Bearer ${process.env["GH"]}` }
+    });
+    
+    const json = await response.json();
+    res.status(200).send(json);
+});
+
 /* Configure HTTP. */
 import {createServer, Server} from "http";
 

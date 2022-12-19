@@ -5,7 +5,8 @@
 
   "scripts": {
     "start": "ts-node src/index.ts",
-    "package": "tsc && pkg --compress GZip ."
+    "package": "tsc && pkg --compress GZip .",
+    "build": "ncc build src/index.ts -o js -m --target es2022"
   },
 
   "dependencies": {
@@ -27,7 +28,8 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "eslint": "^8.16.0",
 
-    "pkg": "^5.7.0"
+    "pkg": "^5.7.0",
+    "@vercel/ncc": "^0.36.0"
   },
 
   "bin": "build/index.js",
