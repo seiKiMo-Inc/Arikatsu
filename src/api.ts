@@ -1,10 +1,13 @@
 /* Declare constants. */
 const HTTP_PORT: number = <number> (process.env["API-PORT"] ?? 6369);
 
+import cors from "cors";
+
 /* Configure Express application. */
 import express, {Express} from "express";
 
 const app: Express = express();
+app.use(cors({ origin: true, credentials: true }));
 
 /* Configure routes. */
 app.get('/kimi', async (req, res) => {
