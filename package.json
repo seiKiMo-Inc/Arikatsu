@@ -6,10 +6,11 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "package": "tsc && pkg --compress GZip .",
-    "build": "ncc build src/index.ts -o bin/js -m --target es2020"
+    "build": "ncc build src/index.ts -o js -m --target es2022"
   },
 
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "dotenv": "^16.0.1",
     "express-fileupload": "^1.4.0",
@@ -17,6 +18,7 @@
   },
 
   "devDependencies": {
+    "@types/cors": "2.8.13",
     "@types/node": "^18.0.0",
     "@types/express": "^4.17.13",
     "@types/express-fileupload": "^1.2.2",
@@ -28,8 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "eslint": "^8.16.0",
 
-    "pkg": "^5.7.0",
-    "@vercel/ncc": "^0.34.0"
+    "pkg": "^5.7.0"
   },
 
   "bin": "build/index.js",

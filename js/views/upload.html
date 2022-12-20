@@ -1,0 +1,27 @@
+<!--suppress HtmlFormInputWithoutLabel -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Area</title>
+    <link rel="stylesheet" href="styles/upload.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="main">
+            <form rel="upload-form" id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file-upload" id="upload-tag">Select a file</label><br>
+                <input id="file-upload" type="file" style="display:none" onchange="javascript:updateList()" multiple /><br>
+                <div id="file-list"></div><br><br>
+                <input id="submit" type="submit" value="Upload" onclick="javascript:alertEmptyList()" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/upload.js"></script>
+</body>
+
+</html>
