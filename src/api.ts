@@ -24,8 +24,6 @@ app.get('/org', async (req, res) => {
         redirect: "follow", headers: { Authorization: `Bearer ${process.env["GH"]}` }
     });
     
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    
     const json = await response.json();
     res.status(200).send(json);
 });
